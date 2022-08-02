@@ -1,0 +1,27 @@
+pseudocode using python:
+
+Step1: Get the input in a list.
+Step2: Initialize the required variables.
+	* Set the 'count' value as 1.
+	* Calculate the list's length and assign the result to 'n'.
+Step3: Create a for loop which starts with '0' upto 'n'.
+Step4: Then create an if condition(a[i]!=' '). If it is true, then goes to step5.
+Step5: Create a inner for loop and it starts with 'i+1' upto 'n'.
+Step6: Create an if condition(a[i]==a[j]). If it is true, then increment the 'count' by 1 and replace a[j] by ' '.
+Step7: Print 'count' value after the inner for loop becomes false.
+Step8: Then replace 'count' value by 1.
+Step9: This will repeat until end of the list.
+
+Here is the program for above pseudocode:
+
+count=1
+a=list(input("enter the string"))
+n=len(a)
+for i in range(0,n):
+    if(a[i]!=" "):
+        for j in range(i+1,n):
+            if(a[i]==a[j]):
+                count+=1
+                a[j]=" "
+        print(a[i],count)
+        count=1
